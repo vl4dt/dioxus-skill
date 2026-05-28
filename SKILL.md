@@ -13,10 +13,6 @@ license: MIT OR Apache-2.0
 2. **ALWAYS enable correct Cargo feature** (`web`/`desktop`/`mobile`) before building.
 3. **ALWAYS prefer signals** for local reactive state.
 
-1. **ALWAYS use the `dx` CLI** — it orchestrates cargo builds, hot-reloading, and bundling.
-2. **ALWAYS enable the correct Cargo feature** (`web`/`desktop`/`mobile`) before building.
-3. **ALWAYS prefer signals** over `use_state`/`use_context` for local reactive state.
-
 ## Quick start
 
 ```bash
@@ -30,7 +26,7 @@ dx new my_app && cd my_app && dx serve
 |---------|---------|
 | `dx new <name>` | Create project (bare-bones / jumpstart / workspace) |
 | `dx serve` | Dev server with hot-reloading (default: web) |
-| `dx serve --platform android\|ios\|web\|desktop` | Target platform |
+| `dx serve --platform android|ios|web|desktop` | Target platform |
 | `dx serve --hotpatch` | Subsecond Rust hot-patching (experimental) |
 | `dx build` | Production build |
 | `dx bundle` | Package (.app/.msi/.deb/.ipa/.apk) |
@@ -91,7 +87,6 @@ DX_TELEMETRY_ENABLED=false dx serve
 | iOS non-Mac | Requires Xcode; use remote Mac or CI runner |
 | Hot-reload | Use `dx serve`, not `cargo run` |
 | Features | `dx serve` reads Cargo.toml features; enable `web`/`desktop`/`mobile` |
-|---------|-----|
 
 ## Key resources
 
